@@ -4,6 +4,7 @@ const { dest } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const streamqueue = require('streamqueue');
+const sourcemaps = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
 
@@ -18,10 +19,12 @@ gulp.task('build', function () {
 
 	let fullStream = streamqueue(
 		{ objectMode: true },
-		sassStream,
-		normalizeStream
+		normalizeStream,
+		sassStream
 	)
+		.pipe(sourcemaps.init())
 		.pipe(concat('kruna.css'))
+		.pipe(sourcemaps.write())
 		.pipe(dest('dist/'));
 
 	return fullStream;
