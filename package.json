@@ -4,7 +4,7 @@
   "description": "A minimal CSS library, mostly for personal use",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/benjaminvanseggelen/kruna_css/issues"
   },
-  "homepage": "https://github.com/benjaminvanseggelen/kruna_css#readme"
+  "homepage": "https://github.com/benjaminvanseggelen/kruna_css#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "streamqueue": "^1.1.2"
+  },
+  "dependencies": {
+    "merge-stream": "^2.0.0"
+  }
 }
