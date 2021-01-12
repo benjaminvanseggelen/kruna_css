@@ -27,6 +27,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "node-sass": "^5.0.0",
+    "sass": "^1.32.4",
     "streamqueue": "^1.1.2"
   },
   "dependencies": {
