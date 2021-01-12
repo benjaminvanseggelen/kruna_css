@@ -350,9 +350,14 @@ template {
 	display: none;
 }
 
+/**
+ * Kruna.css
+ * MIT License
+ * Benjamin van Seggelen
+ * https://github.com/benjaminvanseggelen/kruna_css
+*/
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* kruna.css - MIT License - github.com/benjaminvanseggelen/kruna_css */
 /*# sourceMappingURL=kruna.css.map */

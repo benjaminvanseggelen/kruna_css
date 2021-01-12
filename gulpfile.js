@@ -17,9 +17,12 @@ gulp.task('build', function () {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(concat('style.scss'));
 
+	let licenseStream = src('./src/license.css').pipe(sourcemaps.init());
+
 	let fullStream = streamqueue(
 		{ objectMode: true },
 		normalizeStream,
+		licenseStream,
 		sassStream
 	)
 		.pipe(concat('kruna.css'))
