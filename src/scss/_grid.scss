@@ -1,0 +1,23 @@
+@use 'breakpoints';
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+
+	@include breakpoints.min-width('sm') {
+		width: 700px;
+	}
+
+	@include breakpoints.min-width('md') {
+		width: 900px;
+	}
+
+	@include breakpoints.min-width('lg') {
+		width: 1000px;
+	}
+
+	@include breakpoints.min-width('xl') {
+		width: 1200px;
+	}
+}
