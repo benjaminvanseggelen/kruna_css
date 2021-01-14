@@ -42,11 +42,64 @@ $gutterWidth: 15px;
 }
 
 @each $breakpoint, $screenWidth in breakpoints.$breakpoints {
-	@for $i from 1 through $columnCount {
-		.grid-item-#{$breakpoint}-#{$i} {
-			@include breakpoints.min-width(#{$breakpoint}) {
+	@include breakpoints.min-width(#{$breakpoint}) {
+		@for $i from 1 through $columnCount {
+			.grid-item-#{$breakpoint}-#{$i} {
 				grid-column-end: span $i;
 			}
+		}
+	}
+}
+
+// Align classes
+.grid-h-start {
+	justify-items: start;
+}
+
+.grid-v-start {
+	align-items: start;
+}
+
+.grid-h-center {
+	justify-items: center;
+}
+
+.grid-v-center {
+	align-items: center;
+}
+
+.grid-h-end {
+	justify-items: end;
+}
+
+.grid-v-end {
+	align-items: end;
+}
+
+@each $breakpoint, $screenWidth in breakpoints.$breakpoints {
+	@include breakpoints.min-width(#{$breakpoint}) {
+		.grid-h-#{$breakpoint}-start {
+			justify-items: start;
+		}
+
+		.grid-v-#{$breakpoint}-start {
+			align-items: start;
+		}
+
+		.grid-h-#{$breakpoint}-center {
+			justify-items: center;
+		}
+
+		.grid-v-#{$breakpoint}-center {
+			align-items: center;
+		}
+
+		.grid-h-#{$breakpoint}-end {
+			justify-items: end;
+		}
+
+		.grid-v-#{$breakpoint}-end {
+			align-items: end;
 		}
 	}
 }
