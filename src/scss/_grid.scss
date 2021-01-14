@@ -1,9 +1,16 @@
 @use 'breakpoints';
 
-.container {
+$columnCount: 12;
+$gutterWidth: 15px;
+
+.grid {
+	display: grid;
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
+	grid-template-columns: repeat($columnCount, 1fr);
+	column-gap: $gutterWidth;
+	row-gap: $gutterWidth;
 
 	@include breakpoints.min-width('sm') {
 		width: 700px;
@@ -19,5 +26,17 @@
 
 	@include breakpoints.min-width('xl') {
 		width: 1200px;
+	}
+}
+
+@each $breakpoint, $screenWidth in breakpoints.$breakpoints {
+	@for $i from 1 through $columnCount {
+		.grid-item-#{$breakpoint}-#{$i} {
+			grid-column-end: span $i;
+		}
+
+		.grid-item-#{$i} {
+			grid-column-end: span $i;
+		}
 	}
 }
