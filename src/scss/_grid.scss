@@ -29,14 +29,24 @@ $gutterWidth: 15px;
 	}
 }
 
+@for $i from 1 through $columnCount {
+	@each $breakpoint, $screenWidth in breakpoints.$breakpoints {
+		.grid-item-#{$breakpoint}-#{$i} {
+			grid-column-end: span $columnCount;
+		}
+	}
+
+	.grid-item-#{$i} {
+		grid-column-end: span $i;
+	}
+}
+
 @each $breakpoint, $screenWidth in breakpoints.$breakpoints {
 	@for $i from 1 through $columnCount {
 		.grid-item-#{$breakpoint}-#{$i} {
-			grid-column-end: span $i;
-		}
-
-		.grid-item-#{$i} {
-			grid-column-end: span $i;
+			@include breakpoints.min-width(#{$breakpoint}) {
+				grid-column-end: span $i;
+			}
 		}
 	}
 }
