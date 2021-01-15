@@ -32,7 +32,7 @@ Do not use something like `jsdelivr` to import this. This repo might be subject 
 
 To run:
 
-> git clone https://github.com/benjaminvanseggelen/kruna_css
+> git clone https://github.com/benjaminvanseggelen/kruna_css.git
 
 > npm run build
 
