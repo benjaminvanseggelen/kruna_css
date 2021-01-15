@@ -1,6 +1,6 @@
 {
   "name": "kruna_css",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A minimal CSS library, mostly for personal use",
   "main": "index.js",
   "scripts": {
