@@ -361,6 +361,33 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .grid {
   display: grid;
   position: relative;
@@ -369,26 +396,6 @@ body {
   grid-template-columns: repeat(12, 1fr);
   column-gap: 15px;
   row-gap: 15px;
-}
-@media (min-width: 768px) {
-  .grid {
-    width: 700px;
-  }
-}
-@media (min-width: 992px) {
-  .grid {
-    width: 900px;
-  }
-}
-@media (min-width: 1200px) {
-  .grid {
-    width: 1000px;
-  }
-}
-@media (min-width: 1400px) {
-  .grid {
-    width: 1200px;
-  }
 }
 
 .grid-item-xs-1 {

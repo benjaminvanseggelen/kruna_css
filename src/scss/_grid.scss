@@ -3,14 +3,11 @@
 $columnCount: 12;
 $gutterWidth: 15px;
 
-.grid {
-	display: grid;
+.container {
+	display: block;
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
-	grid-template-columns: repeat($columnCount, 1fr);
-	column-gap: $gutterWidth;
-	row-gap: $gutterWidth;
 
 	@include breakpoints.min-width('sm') {
 		width: 700px;
@@ -27,6 +24,16 @@ $gutterWidth: 15px;
 	@include breakpoints.min-width('xl') {
 		width: 1200px;
 	}
+}
+
+.grid {
+	display: grid;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	grid-template-columns: repeat($columnCount, 1fr);
+	column-gap: $gutterWidth;
+	row-gap: $gutterWidth;
 }
 
 @for $i from 1 through $columnCount {
