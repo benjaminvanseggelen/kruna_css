@@ -26,7 +26,7 @@ Read about its usage [here](https://github.com/benjaminvanseggelen/kruna_css/wik
 
 ## Installation for Usage
 
-Do not use something like `jsdelivr` to import this. This repo might be subject to massive changes. Instead, download the [kruna.css](https://github.com/benjaminvanseggelen/kruna_css/blob/master/dist/kruna.css) and (optionally) the [kruna.css.map](https://github.com/benjaminvanseggelen/kruna_css/blob/master/dist/kruna.css.map) files. Place these together in one directory, and import `kruna.css`.
+Do not use something like `jsdelivr` to import this. This repo might be subject to massive changes. Instead, download [kruna.css](https://github.com/benjaminvanseggelen/kruna_css/blob/master/dist/kruna.css) and (optionally) [kruna.css.map](https://github.com/benjaminvanseggelen/kruna_css/blob/master/dist/kruna.css.map). Place these together in one directory, and import `kruna.css`.
 
 ## Installation for Development
 
